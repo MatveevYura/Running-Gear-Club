@@ -1,0 +1,110 @@
+//========================================================================================================================================================
+
+.about-page {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  // .about__container
+  &__container {
+  }
+  // .about__title
+  &__title {
+    font-weight: 700;
+font-size: rem(32);
+line-height: math.div(39 , 32);
+  }
+  // .about__block
+  &__block {
+    @include adaptiveValue("margin-top", 32, 16);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    @media (max-width:$tablet){
+      flex-direction: column;
+    }
+    @media (max-width:$mobile){
+       gap: 40px; 
+    }
+  }
+  // .about__left
+  &__left {
+    width: 50%;
+    @media (max-width:$tablet){
+      width: 100%;
+    }
+    p{
+      @include adaptiveValue("line-height", 29, 20);
+    @include adaptiveValue("font-size", 24, 16);
+      &:not(:last-child) {
+        margin-bottom: rem(16);
+        
+      }
+    }
+  }
+  
+  // .about__right
+  &__right {
+    flex: 0 0 50%;
+    position: relative;
+    @media (max-width:$mobile){
+       transform: none;
+       position: static;
+       display: flex;
+    flex-direction: column-reverse;
+    }
+  }
+  // .about__img
+  &__img {
+    
+    img{
+      max-width: 100%;
+      position: absolute;
+      width: 100%;
+      height: 400px;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      @media (max-width:$mobile){
+       position: static; 
+         width: calc(100% + 1px);
+         margin-left: -1px;
+      }
+    }
+  }
+  // .about__questions
+  &__questions {
+    margin-top: rem(432);
+    @media (max-width:$mobile){
+       margin-top: 0; 
+       margin-bottom: rem(40);
+    }
+  }
+  // .about__questions-text
+  &__questions-text {
+    font-weight: 700;
+
+@include adaptiveValue("line-height", 39, 24);
+@include adaptiveValue("font-size", 32, 20);
+@include adaptiveValue("margin-bottom", 32, 16);
+max-width: 520px;
+  }
+  // .about__questions-mail
+  &__questions-mail {
+    text-align: right;
+    color: $red;
+    font-weight: 700;
+    @include adaptiveValue("line-height", 39, 24);
+    @include adaptiveValue("font-size", 32, 20);
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    @media (max-width:$mobileSmall){
+       text-align: left; 
+    }
+  }
+}
+
+
+//========================================================================================================================================================

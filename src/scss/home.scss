@@ -1,0 +1,502 @@
+//====================================================================================================
+.hero {
+  background-color: $red;
+  display: flex;
+  @media (max-width:$mobile){
+     flex-direction: column; 
+  }
+  // .hero__left
+  &__left {
+    color: $white;
+    padding: rem(80) 0;
+    flex: 0 0 100%;
+    display: flex;
+    @media (max-width:$mobile){
+      padding: rem(40) 0;
+    }
+  }
+  // .hero__container
+  &__container {
+    max-width: rem(1255);
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  &__body{
+    width: 50%;
+    @include adaptiveValue("padding-right", 100, 5,0,$containerWidth, 770);
+    @media (max-width:$mobile){
+       width: 100%;
+       padding: 0; 
+    }
+  }
+  // .hero__first-block
+  &__first-block {
+    margin-bottom: rem(170);
+    @media (max-width:$mobile){
+       margin-bottom: rem(50); 
+    }
+  }
+  // .hero__second-block
+  &__second-block {
+  }
+  // .hero__right
+  &__right {
+    flex: 0 0 50%;
+    transform: translate(-100%,0px);
+    position: relative;
+    @media (max-width:$mobile){
+       transform: none;
+       position: static;
+       margin-bottom: rem(40);
+    }
+    img{
+      max-width: 100%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      @media (max-width:$mobile){
+       position: static; 
+         width: calc(100% + 1px);
+         margin-left: -1px;
+      }
+    }
+  }
+}
+.first-block {
+
+  // .first-block__title
+  &__title {
+    font-weight: 700;
+line-height: math.div(44 , 36);
+margin-bottom: rem(16);
+@include adaptiveValue("font-size", 36, 32);
+  }
+  // .first-block__yellow
+  &__yellow {
+    color: $yellow;
+    font-style: italic;
+  }
+  // .first-block__text
+  &__text {
+    line-height: math.div(29 , 24);
+    margin-bottom: rem(36);
+    @include adaptiveValue("font-size", 24, 20);
+  }
+  // .first-block__button
+  &__button {
+  }
+}
+
+.second-block {
+  &__first-line{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: rem(16);
+    @media (max-width:$tablet){
+      gap: 10px;
+    }
+    @media (max-width:$mobile){
+       justify-content: center; 
+    }
+    @media (max-width:373px){
+       flex-direction: column; 
+       align-items: start;
+       margin-bottom: rem(10);
+    }
+  }
+  // .second-block__item
+  &__item {
+    display: flex;
+    align-items: center;
+    line-height: math.div(29 , 24);
+    @include adaptiveValue("font-size", 24, 20);
+    i{
+      margin-right: 10px;
+    }
+    @media (max-width:$mobile){
+      justify-content: center;
+    }
+
+  }
+  
+}
+
+//========================================================================================================================================================
+
+.logos {
+  @include adaptiveValue("padding-top", 90, 50);
+      @include adaptiveValue("padding-bottom", 90, 50);
+}
+.logo {
+  
+		// .logo__slider
+		&__slider {
+      
+		}
+		// .logo__wrapper
+		&__wrapper {
+		}
+		// .logo__slide
+		&__slide {
+      img{
+        width: 100%;
+    height: 50px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+      }
+		}
+}
+.swiper-logo {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+
+//====================================================================================================
+
+.offers {
+  background-color: $white;
+  @include adaptiveValue("padding-top", 80, 40);
+    @include adaptiveValue("padding-bottom", 80, 40);
+  // .offers__container
+  &__container {
+    
+  }
+  // .offers__header
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(32);
+    @media (max-width:$mobileSmall){
+       flex-direction: column;
+       gap: 20px; 
+    }
+  }
+  // .offers__title
+  &__title {
+    font-weight: 700;
+@include adaptiveValue("font-size", 32, 28);
+line-height: math.div(39 , 32);
+
+  }
+  &__nav{
+    display: flex;
+    gap: 20px;
+  }
+  // .offers__slider
+  &__slider {
+  }
+  // .offers__wrapper
+  &__wrapper {
+  }
+  // .offers__slide
+  &__slide {
+  }
+  // .offers__item
+  &__item {
+    filter: drop-shadow(0px 10px 8px rgba(123, 1, 1, 0.2));
+    background-color: $red;
+    border-radius: 18px;
+margin-bottom: rem(32);
+width: 288px;
+  }
+  // .offers__item-top
+  &__item-top {
+    background-color: #FAE6CD;
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+height: 300px;
+  }
+  
+  &__logo{
+    margin-top: rem(24);
+    width: 200px;
+    height: 75px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  &__itemTitle {
+    margin-top: rem(50);
+    font-weight: 700;
+    color: $red;
+font-size: rem(36);
+line-height: math.div(44 , 36);
+  }
+  // .offers__subTitle
+  &__subTitle {
+    text-align: center;
+    margin: 10px 24px auto;
+    font-weight: 300;
+font-size: rem(16);
+line-height: math.div(20 , 16);
+color: #B2A099;
+  }
+  &__union{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+      }
+  // .offers__item-bottom
+  &__item-bottom {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: rem(16);
+  }
+  // .offers__date
+  &__date {
+    padding-top: rem(18);
+    font-weight: 300;
+font-size: rem(16);
+line-height: math.div(20 , 16);
+margin-bottom: rem(8);
+color: $white;
+  }
+  &__footer-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media (max-width:$mobileSmall){
+       justify-content: center; 
+    }
+  }
+}
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+
+}
+.swiper-pagination {
+}
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+}
+.swiper {
+  padding: 0 12px !important;
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.first-block {
+  // .first-block__button
+  &__button {
+  }
+}
+.main-button {
+}
+
+//====================================================================================================
+
+.steps {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  // .steps__container
+  &__container {
+  }
+  // .steps__title
+  &__title {
+    font-weight: 700;
+font-size: 32px;
+line-height: math.div(39 , 32);
+  }
+  // .steps__red
+  &__red {
+    color: $red;
+    font-style: italic;
+  }
+  // .steps__block
+  &__block {
+    margin-top: rem(30);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    @media (max-width:$tablet){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  // .steps__item
+  &__item {
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+align-content: center;
+min-height: 268px;
+width: 33.3333%;
+@media (max-width:$tablet){
+  width: 48%;
+}
+@media (max-width:$mobile){
+   width: 100%; 
+}
+    &.item-1{
+      background-color: #BED9FA;
+    }
+    &.item-2{
+      background-color: #F6DE7C;
+    }
+    &.item-3{
+      background-color: #FAD0BE;
+    }
+  }
+  // .steps__number
+  &__number {
+    font-weight: 700;
+font-size: 48px;
+line-height: math.div(59 , 48);
+color: $white;
+padding: 10px 0 0 25px;
+align-self: start;
+  }
+  // .steps__icon
+  &__icon {
+    margin: 0 auto;
+    @include adaptiveValue("margin-bottom", 40, 24);
+    @media (max-width:$mobile){
+       @include adaptiveValue("margin-top", 0, -30); 
+    }
+  }
+  // .steps__text
+  &__text {
+    text-align: center;
+    padding: 0 rem(32) rem(32);
+    @include adaptiveValue("line-height", 29, 24);
+    @include adaptiveValue("font-size", 24, 20);
+  }
+}
+
+//========================================================================================================================================================
+
+.about {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  background-color: $white;
+  // .about__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .about__left
+  &__left {
+    @include adaptiveValue("margin-right", 185, 40, 0, $containerWidth, 991);
+    @media (max-width:$tablet){
+      margin: 0; 
+    }
+  }
+  // .about__header
+  &__header {
+    font-weight: 700;
+font-size: rem(32);
+line-height: math.div(39 , 32);
+margin-bottom: rem(32);
+  }
+  // .about__text
+  &__text {
+    font-weight: 500;
+    @include adaptiveValue("line-height", 29, 24);
+    @include adaptiveValue("font-size", 24, 20);
+    margin-bottom: rem(32);
+  }
+  // .about__block
+  &__block {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    gap: 10px;
+    p{
+      @include adaptiveValue("line-height", 29, 24);
+    @include adaptiveValue("font-size", 24, 20);
+    width: 360px;
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+    }
+  }
+  &__block-for-img{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width:$mobile){
+      flex-direction: column-reverse; 
+    }
+  }
+  &__img-tablet{
+    display: none;
+    @media (max-width:$tablet){
+      display: flex;
+      width: 100%;
+    @include adaptiveValue("height", 420, 320);
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    }
+    @media (max-width:$mobile){
+       
+    }
+  }
+  // .about__right
+  &__right {
+    @media (max-width:$tablet){
+      display: none;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.policy {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  // .policy__container
+  &__container {
+  }
+  // .policy__header
+  &__header {
+    font-weight: 700;
+font-size: rem(32);
+line-height: math.div(39 , 32);
+  }
+  // .policy__text
+  &__text {
+    max-width: 912px;
+    h5{
+      line-height: math.div(29 , 24);
+      font-weight: 600;
+      margin-top: rem(32);
+    }
+    p{
+      margin-top: rem(16);
+      @include adaptiveValue("font-size", 24, 16);
+      @include adaptiveValue("line-height", 29, 20);
+    }
+    a{
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    }
+  }
+}

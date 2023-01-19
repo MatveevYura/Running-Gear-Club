@@ -1,0 +1,235 @@
+//====================================================================================================
+.header {
+  background-color: $beige;
+  @media (max-width:$mobile){
+    position: relative; 
+ }
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px auto;
+    @media (max-width:$mobile){
+    padding: 0;
+
+      margin: rem(10) rem(24);
+    }
+  }
+  // .header__title
+  &__title {
+    font-weight: 700;
+font-size: rem(36);
+line-height: math.div(44 , 36);
+@media (max-width:$mobile){
+font-size: rem(24);
+line-height: math.div(24 , 24);
+}
+@media (max-width:$mobileSmall){
+  width: 130px; 
+}
+  }
+  // .header__nav
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+  }
+  // .header__search
+  &__search {
+    position: relative;
+  }
+  &__input {
+    padding: 8px 24px 8px 48px;
+    background-color: $white;
+    border-radius: 8px;
+    color: #B2A099;
+    font-size: rem(16);
+line-height: math.div(20 , 16);
+border: 2px solid $white;
+width: 310px;
+@media (any-hover: hover){
+  &:hover{
+    border: 2px solid #1B0A02;
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+  }
+}
+&:focus{
+  color: $mainColor;
+}
+@media (max-width:$mobile){
+   display: none; 
+}
+  }
+}
+.menu{
+  // .header__body
+  &__body-desktop {
+    display: flex;
+    align-items: center;
+    margin: 0px rem(24) 0px 0px;
+    @media (max-width:$tablet){
+        display: none;
+    }
+  }
+    // .hader__list
+    &__list-desktop {
+      &:not(:last-child) {
+        margin: 0px rem(24) 0px 0px;
+      }
+    }
+  // .header__item
+  &__item-desktop {
+    
+  }
+  // .header__link
+  &__link-desktop {
+    font-weight: 400;
+font-size: rem(16);
+line-height: math.div(20 , 16);
+
+@media (any-hover: hover){
+  &:hover{
+    color: $red;
+    transition: all 0.3s ease 0s;
+  }
+}
+  }
+}
+.active {
+}
+._icon-search{
+  font-size: rem(20);
+  position: absolute;
+  top: 10px;
+  left: 26px;
+  @media (max-width:$mobile){
+     position: static;
+  }
+}
+.menu {
+  // .menu__body-mobile
+  &__body-mobile {
+    background-color: $red;
+  display: none;
+  }
+  // .menu__list-mobile
+  &__list-mobile {
+    padding: 24px 24px 32px 24px;
+
+  }
+  // .menu__item-mobile
+  &__item-mobile {
+    padding: 8px 0;
+  }
+  // .menu__link-mobile
+  &__link-mobile {
+    color: $white;
+    font-size: rem(20);
+    line-height: math.div(24 , 20);
+    
+  }
+}
+.current a {
+  color: $red;
+}
+.menu-open{
+  .header__container{
+    position: relative;
+    
+  }
+  .header__title, .page, .footer, .header__search{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+      -o-filter: blur(4px);
+     -ms-filter: blur(4px);
+         filter: blur(4px);
+         
+  }
+  .menu__body-mobile{
+display: block;
+    position: absolute;
+    top: 0px;
+    padding-top: 74px;
+    right: 0;
+    z-index: 4;
+    @media (max-width:$mobile){
+      padding-top: 44px;
+    }
+  }
+  .icon-menu{
+    @media (max-width: $tablet) {
+      span,
+      &::before,
+      &::after {
+        content: "";
+        background-color: $mainColor;
+        @media (any-hover: hover){
+          &:hover{
+        background-color: $white;
+          }
+        }
+      }
+  }
+}
+.current a {
+  color: $mainColor;
+}
+}
+//====================================================================================================
+.icon-menu {
+	display: none;
+	@media (max-width: $tablet) {
+    margin: 0px 0px 0px rem(24);
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: $mainColor;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+//Burger
+/*
+
+*/

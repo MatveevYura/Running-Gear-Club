@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Running Gear Club</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230120001217">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+	<meta name="theme-color" content="#ffffff" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__title">Running Gear Club</a>
+				<div class="header__nav">
+					<nav class="menu__body-desktop menu-js">
+						<ul class="menu__list-desktop">
+							<li class="menu__item-desktop"><a href="index.html" class="menu__link-desktop">Home</a></li>
+						</ul>
+						<ul class="menu__list-desktop">
+							<li class="menu__item-desktop"><a href="stores.html" class="menu__link-desktop">Stores</a></li>
+						</ul>
+						<ul class="menu__list-desktop">
+							<li class="menu__item-desktop"><a href="index.html" id="testID" data-anchor="#anchors-offers" class="menu__link-desktop">Trending
+									offers</a></li>
+						</ul>
+					</nav>
+					<form class="header__search">
+						<input class="header__input" type="text" placeholder="Search for brand or company">
+						<button class="_icon-search" type="submit"></button>
+					</form>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<nav class="menu__body-mobile menu-js">
+				<ul class="menu__list-mobile">
+					<li class="menu__item-mobile"><a href="index.html" class="menu__link-mobile">Home</a></li>
+					<li class="menu__item-mobile"><a href="stores.html" class="menu__link-mobile">Stores</a></li>
+					<li class="menu__item-mobile"><a href="index.html" id="testID" data-anchor="#anchors-offers" class="menu__link-mobile">Trending Offers</a></li>
+					<li class="menu__item-mobile"><a href="about.html" class="menu__link-mobile">About Us</a></li>
+					<li class="menu__item-mobile"><a href="policy.html" class="menu__link-mobile">Private Policy</a></li>
+					<li class="menu__item-mobile"><a href="#" class="menu__link-mobile">Running Gear Club</a></li>
+					<li class="menu__item-mobile"><a href="#" class="menu__link-mobile">Coupon Brasil</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="page">
+			<section class="about-page">
+				<div class="about-page__container">
+					<div class="about-page__title">About Us</div>
+					<div class="about-page__block">
+						<div class="about-page__left">
+							<p>LAUNCHED IN 2021</p>
+							<p>We've been building platforms for runners since 2020. We have been working with and for runners for the
+								past two years and knew that one of their biggest pain points is how expensive the sport can be when you
+								do it regularly. </p>
+							<p>That is why we created Running Gear Club - a community where we can use the power of the group to
+								negotiate exclusive discounts, freebies, competitions and more for our members.</p>
+							<p>The more members we have, the bigger the discounts we can secure! So tell your friends to join!</p>
+						</div>
+						<div class="about-page__right">
+							<div class="about-page__img">
+								<picture><source srcset="img/about/about.webp" type="image/webp"><img src="img/about/about.png" alt=""></picture>
+							</div>
+							<div class="about-page__questions">
+								<div class="about-page__questions-text">Have any questions, suggestions or complaints?</div>
+								<div class="about-page__questions-mail"><a href="mailto:hello@runninggearclub.com">hello@runninggearclub.com</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__nav">
+					<div class="footer__items">
+						<div class="footer__title">HELP AND SUPPORT</div>
+						<a href="about.html" class="footer__link">About Us</a>
+						<a href="policy.html" class="footer__link">Private Policy</a>
+					</div>
+					<div class="footer__items">
+						<div class="footer__title">OUR NETWORK</div>
+						<a href="#" class="footer__link">Running Gear Club</a>
+						<a href="#" class="footer__link">Coupons Brasil</a>
+					</div>
+				</div>
+				<div class="footer__contact">
+					<a href="mailto:hello@runninggearclub.com" class="footer__mail">hello@runninggearclub.com</a>
+					<p class="footer__copy">© 2023 Exquisite Media. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230120001217"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js?_v=20230120001217"></script>
+	<script>
+		function copytext(el) {
+			var $tmp = $("<textarea>");
+			$("body").append($tmp);
+			$tmp.val($(el).text()).select();
+			document.execCommand("copy");
+			$tmp.remove();
+		}
+	</script>
+
+	<script>
+		$('#testID').on('click', function(e) {
+			var goto = $(this).data('anchor');
+			$('html,body').stop().animate({
+				scrollTop: $(goto).offset().top - 60
+			}, 1000);
+			e.preventDefault();
+		});
+	</script>
+</body>
+
+</html>

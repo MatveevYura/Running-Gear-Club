@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Running Gear Club"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="about-page">
+        <div class="about-page__container">
+          <div class="about-page__title">About Us</div>
+          <div class="about-page__block">
+            <div class="about-page__left">
+              <p>LAUNCHED IN 2021</p>
+              <p>We've been building platforms for runners since 2020. We have been working with and for runners for the
+                past two years and knew that one of their biggest pain points is how expensive the sport can be when you
+                do it regularly. </p>
+              <p>That is why we created Running Gear Club - a community where we can use the power of the group to
+                negotiate exclusive discounts, freebies, competitions and more for our members.</p>
+              <p>The more members we have, the bigger the discounts we can secure! So tell your friends to join!</p>
+            </div>
+            <div class="about-page__right">
+              <div class="about-page__img">
+                <img src="@img/about/about.png" alt="">
+              </div>
+              <div class="about-page__questions">
+                <div class="about-page__questions-text">Have any questions, suggestions or complaints?</div>
+                <div class="about-page__questions-mail"><a
+                    href="mailto:hello@runninggearclub.com">hello@runninggearclub.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
